@@ -1,7 +1,7 @@
 #Exercitiul 1
-# lista =[7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
-# lista.sort()
-# print(lista)
+#lista =[7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
+#lista.sort()
+#print(lista)
 # print(lista [0:9:2])
 # lista.reverse()
 # print(lista)
@@ -47,5 +47,11 @@
 #
 # print(function(input(("Your number :"))))
 
-
-
+# Exercitiul 7
+# n=1
+# summ=0
+# for letters in "Scoala Informala":
+#     letters = n
+#     summ = summ + letters
+#
+# print(summ)

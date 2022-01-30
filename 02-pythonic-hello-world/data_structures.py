@@ -11,14 +11,14 @@ lista = [8, 2, -5,"str", 2.7]
 #print(lista[-1]) #ultimul element din lista
 #print(lista[-1: -4: -2])
 
-# lista[3] = "mere"
-#lista.append("mere")
+#lista[3] = "mere" #inlocuieste index 3 cu "mere"
+#lista.append("mere") #adauga la sfarsit "mere"
 #print(lista)
 #print(len(lista))
 #print(lista[-5]) # afiseaza 8
-# lista.insert(3,"element nou") #insereaza element nou
-# print (lista)
-#lista.remove(-5) #remove element -5
+#lista.insert(3,"element nou") #insereaza element nou pe idndex 3
+#print (lista)
+#lista.remove(-5) #remove element index -5
 # lista.pop() # scoate ultimul element din lista
 # lista.pop(2) #scoate elementul cu index 2
 # lista.clear () #lista goala
