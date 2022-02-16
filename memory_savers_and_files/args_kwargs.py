@@ -19,7 +19,7 @@
 #     return diferenta
 # print(diff_vars(1,2,3,4))
 
-def catalog (*args, **kwargs): #returneaza dictionar
-
-    return args, kwargs.keys()
-print(catalog(1,2, nume = "Popa", prenume = "ionut", varsta = '12'))
+# def catalog (*args, **kwargs): #returneaza dictionar
+#
+#     return args, kwargs.keys()
+# print(catalog(1,2, nume = "Popa", prenume = "ionut", varsta = '12'))
