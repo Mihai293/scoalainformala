@@ -6,10 +6,10 @@ def zz():
         z = cnplist[1:7]
         ziua = ''.join(map(str, z))
         data_zi = datetime.datetime.strptime(ziua, "%y%m%d")
-
         start = datetime.datetime.strptime('01-01-1900', '%d-%m-%Y')
         end = datetime.datetime.strptime('19-03-2022', '%d-%m-%Y')
         return True
+
     except ValueError:
         print("Ziua nu corespunde cu luna")
         return False
@@ -162,7 +162,7 @@ def jj ():
     a = cnplist[7:9]
     judet_list = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
                   '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', "41", '42', '43', '44', '45', '46',
-                  '47', '48', '49', '50', '51', '52')
+                  '51', '52')
     cod_judet = "".join(map(str, a))
     if cod_judet in list(judet_list):
         return True
