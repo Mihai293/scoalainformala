@@ -3,11 +3,8 @@ cnplist = []
 
 def zz():
     try:
-        z = cnplist[1:7]
-        ziua = ''.join(map(str, z))
-        data_zi = datetime.datetime.strptime(ziua, "%y%m%d")
-        start = datetime.datetime.strptime('01-01-1900', '%d-%m-%Y')
-        end = datetime.datetime.strptime('19-03-2022', '%d-%m-%Y')
+        z = ''.join([str(elem) for elem in cnplist[1:7]])
+        data_zi = datetime.datetime.strptime(z, "%y%m%d")
         return True
 
     except ValueError:
