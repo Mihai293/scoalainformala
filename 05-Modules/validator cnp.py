@@ -3,15 +3,11 @@ cnplist = []
 
 def zz():
     try:
-        z = cnplist[1:7]
-        ziua = ''.join(map(str, z))
-        data_zi = datetime.datetime.strptime(ziua, "%y%m%d")
-
-        start = datetime.datetime.strptime('01-01-1900', '%d-%m-%Y')
-        end = datetime.datetime.strptime('19-03-2022', '%d-%m-%Y')
+        z = ''.join([str(elem) for elem in cnplist[1:7]])
+        data_zi = datetime.datetime.strptime(z, "%y%m%d")
         return True
+
     except ValueError:
-        print("Ziua nu corespunde cu luna")
         return False
 
 def ss():
@@ -89,86 +85,16 @@ def aa():
     else:
         return False
 
-def ll():
-    lunile =  {"01":"Ian","02":"Feb","03":"Mar","04":"Apr","05":"Mai","06":"Iun","07":"Iul","08":"Aug","09":"Sep","10":"Oct","11":"Noi","12":"Dec" }
-    a = str(cnplist[3])
-    b = str(cnplist[4])
-    x = ""
-    if a == "0" and b == "1":
-        x = "01"
-        if x in list(lunile.keys()):
-            return True
-            #print(lunile[x])
-            #print("avem luna")
-
-    elif a == "0" and b == "2":
-        x = "02"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "0" and b == "3":
-        x = "03"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "0" and b == "4":
-        x = "04"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "0" and b == "5":
-        x = "05"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "0" and b == "6":
-        x = "06"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "0" and b == "7":
-        x = "07"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "0" and b == "8":
-        x = "08"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "0" and b == "9":
-        x = "09"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "1" and b == "0":
-        x = "10"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "1" and b == "1":
-        x = "11"
-        if x in list(lunile.keys()):
-            return True
-
-    elif a == "1" and b == "2":
-        x = "12"
-        if x in list(lunile.keys()):
-            return True
-    else:
-        return False
-
 def jj ():
     a = cnplist[7:9]
-    judet_list = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+    judet_list = ('01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
                   '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', "41", '42', '43', '44', '45', '46',
-                  '47', '48', '49', '50', '51', '52')
+                  '51', '52')
     cod_judet = "".join(map(str, a))
     if cod_judet in list(judet_list):
         return True
     else:
         return False
-
 
 def nnn ():
     a = cnplist[9]
@@ -187,9 +113,7 @@ def cc () :
     cnplist1 = cnplist[0:13]
     cifre = [2, 7, 9, 1, 4, 6, 3, 5, 8, 2, 7, 9]
     lista_inmultire1 = []
-    # lista_inmultire = [cnplist[0] * cifre[0], cnplist[1] * cifre[1], cnplist[2] * cifre[2], cnplist[3] * cifre[3],
-    #                    cnplist[4] * cifre[4], cnplist[5] * cifre[5], cnplist[6] * cifre[6], cnplist[7] * cifre[7],
-    #                    cnplist[8] * cifre[8] ,cnplist[9] * cifre[9], cnplist[10] * cifre[10], cnplist[11] * cifre[11]]
+
     for num1, num2 in zip(cnplist1, cifre):
         lista_inmultire1.append((num1 * num2))
     b = sum(lista_inmultire1)
@@ -210,7 +134,7 @@ def cnp ():
 
         try:
             limita = 13
-            for i in range(0,limita):
+            for i in range(0, limita):
                 cnpq = int(input("Introdu cate o cifra urmat de tasta enter : "))
                 cnplist.append(cnpq)
             print(f'Acesta este CNP ul introdus : {cnplist} !')
@@ -231,12 +155,6 @@ def cnp ():
                 print("Prima cifra este gresita, Va rugam incercati din nou !")
                 return cnp()
 
-            if ll() is True:
-                print(f"Indice luna: {ll()} !")
-            else:
-                print(f"Indice luna: {ll()} !")
-                print("Cifrele 4 si 5 sunt gresite, Va rugam incercati din nou !")
-                return cnp()
 
             if nnn() is True:
                 print(f"Indice NNN: {nnn()} !")
