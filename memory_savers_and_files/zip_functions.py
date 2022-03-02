@@ -3,6 +3,7 @@
 #
 # rezultat = zip(lista_1, lista_2) #zip combina doua liste in functie de index si formeaza tupluri
 # print((list(rezultat)))
+# print((set(rezultat)))
 
 # def zip_function(lista_1, lista_2):
 #     lista = []
