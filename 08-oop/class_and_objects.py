@@ -25,19 +25,19 @@
 # print(cainele_meu.change_name("Ben"))
 # print(cainele_meu)
 
-class Calculator:
-
-    def __init__(self, op1, op2, operatie):
-        self.operator1 = op1 # self ne ajuta sa preluam valorile
-        self.operator2 = op2
-        self.operatie = operatie
-
-    def adunare(self):
-        return self.operator1 + self.operator2
-
-    def __str__(self):
-        if self.operatie == '+':
-            return f" {self.adunare()}"
-
-obiect1 = Calculator(1, 2, '+')
-print(obiect1)
+# class Calculator:
+#
+#     def __init__(self, op1, op2, operatie):
+#         self.operator1 = op1 # self ne ajuta sa preluam valorile
+#         self.operator2 = op2
+#         self.operatie = operatie
+#
+#     def adunare(self):
+#         return self.operator1 + self.operator2
+#
+#     def __str__(self):
+#         if self.operatie == '+':
+#             return f" {self.adunare()}"
+#
+# obiect1 = Calculator(1, 2, '+')
+# print(obiect1)
