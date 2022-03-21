@@ -127,7 +127,7 @@
 #             self.stare = "batran"
 #         else:
 #             self.cumapara = "jucarie"
-#         #Caine.nr_picioare = 3
+#         #Caine.nr_picioare = 3 #reatribuirea var nr_picioare
 #
 #
 #     def __str__(self):
@@ -139,11 +139,137 @@
 #
 #
 # obiect_1 = Caine ("rex", 4)
-# print(type(obiect_1).__name__)
-# print(obiect_1.__dict__)
-# #var2 = obiect_1.__dict__
+# print(type(obiect_1).__name__) #sa ne dam seama din ce clasa provin
+# print(obiect_1.__dict__) #afiseaza toate proprietatile
+# #var2 = obiect_1.__dict__#scoatem o variabila in forma de dictionar
 # print(obiect_1._Caine__nume)
 # print(Caine.nr_picioare)
 # print(Caine.__dict__)
 # print(obiect_1.cumpara)
 # print(hasattr(Caine, "nr_picioare")) # un fel de finder, afiseaza bolean
+
+# class Star:
+#
+#     def __init__(self, nume, galaxie):
+#         self.name = nume
+#         self.galaxy = galaxie
+#
+#     def __str__(self):
+#         return f"{self.name} este in {self.galaxy}"
+#
+# soare = Star("Soare", "Calea Lactee")
+# print(soare)
+
+# vehicul
+# vehiculdeteren
+# vehiculdetractare
+
+# class Vehicul: #python permite mosteniri multiple. Vehicul tractare le poate vedea pe ambele
+#     pass
+#
+# class VehiculTeren(Vehicul): #trecem in paranteze clasa pe care dorim sa o mosteneasca
+#     pass
+#
+# class VehiculTractare(VehiculTeren):
+#     pass
+
+# parinti  sunt Vehicul pentru VehiculTeren si VehiculTractare(indirect)
+# parinti sunt VehiculTeren pentru VehiculTractare
+# parintii sunt super clase pentru copii(superclass)
+# copii sunt VehiculTeren si VehiculTractare(indirect) pentru Vehicul
+# copilul este vehiculTractare pentru vehiculTeren
+# copii se numesc subclase
+# print("Vehicul VehiculTeren VehiculTractare")
+# for cls1 in [Vehicul, VehiculTeren, VehiculTractare]:
+#     for cls2 in [Vehicul, VehiculTeren, VehiculTractare]:
+#         print(issubclass(cls1, cls2), end='\t')
+#     print()
+
+# vehicul1 = Vehicul()
+# vehicul_teren = VehiculTeren()
+# vehicul_tractare = VehiculTractare()
+# print(isinstance(vehicul_teren, Vehicul)) #asa vedem daca clasa are o mostenire(daca vehicul_teren il mosteneste pe Vehicul)
+
+#Interviu #is verifica daca se pointeaza catre acel obiect si egal-egal verifica valoarea
+
+# class Exemplu:
+#     def __init__(self,val):
+#         self.value = val
+#
+# obiect_1 = Exemplu(0)
+# obiect_2 = Exemplu(2)
+# obiect_3 = obiect_1
+# obiect_3.value += 1
+#
+# print(obiect_1 is obiect_2)
+# print(obiect_2 is obiect_3)
+# print(obiect_3 is obiect_1)
+# print(obiect_1.value, obiect_2.value, obiect_3.value)
+
+# string_1 = "Maria are mere "
+# string_2 = "Maria are mere mari"
+# string_1 += "mari"
+# print((string_1 == string_2, string_1 is string_2))
+
+# class SuperClass:
+#
+#     supVar = 1
+#
+#     def __init__(self, nume):
+#         self.name = nume
+#
+#     def __str__(self):
+#         return f"Numele meu este {self.name}"
+#
+# class Clasa3:
+#
+#     variabila_clasa = 5
+#
+#     def __init__(self,name):
+#         self.name = name
+#
+# class SubClass(Clasa3, SuperClass):
+#
+#     subVar = 2
+#
+#
+#     def __init__(self,nume):
+#         #Super.__init__(self,nume)
+#         super().__init__(nume) #aceiasi metoda ca cea de sus
+#
+#     def __str__(self):
+#         return f"Nume"
+#
+# obiect = SubClass("Alexandra")
+# print(obiect.subVar)
+# print(obiect.supVar)
+
+
+class A:
+
+    def info(self):
+        return "Clasa A"
+
+class B(A):
+    pass
+    # def info(self):
+    #     return "Clasa B"
+
+class F:
+    def info(self):
+        return "Clasa F"
+
+class C(A):
+    pass
+    # def info(self):
+    #     return "Clasa C"
+
+class D(A, C):
+    pass
+
+print(D().info()) # va returna clasa B pentru ca se incepe cu prima din STANGA
+print(D().info()) # va returna clasa C pentru ca se incepe cu prima din STANGA iar in B nu se afla nimic
+print(D().info()) # va returna clasa C pentru ca se incepe cu prima din STANGA iar in B nu se afla nimic
+print(D().info()) # va returna clasa A pentru ca nu gaseste nimic si pleaca pe super clasa primei de la stanga, adica B
+#error MRO - eroare ordine mostenire
+#nu se permite mostenirea inlantuita
