@@ -1,4 +1,8 @@
 # #decorator=functie #comportament pe care doresti sa-l implementezi in fiecare functie
+# #In decorator,denumirea functiei este primul parametru din functia decorata
+# Parametrul functiei este defapt parametru din functia functiei decorate . In cazul in care avem 3 functii
+# este necesar ca decoratiratorul sa aibe parametru
+
 # def decorator_simplu(parametru):
 #     print(f"Apelam functia {parametru.__name__}")
 #     return parametru
@@ -66,7 +70,7 @@
 #
 # my_dog.name = "Ben"
 # print(my_dog.name)
-#
+
 # del my_dog.name
 # print(my_dog.name)
 

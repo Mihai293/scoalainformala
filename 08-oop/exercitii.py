@@ -176,9 +176,9 @@
 #         return f"Marca este: {self.marca}, Tipul este: {self.tip}\n\t, Blocuri optice{self.blocuri_optice_led}"
 #
 # obj = ScauneIncalzite(marca = "Aro", tip = 461, scaune_incalzite = "NU")
-# print(obj)
-# obj.schimbare_culoare("rosu")
-# print(obj.culoare)
+# # print(obj)
+# # obj.schimbare_culoare("rosu")
+# # print(obj.culoare)
 #
 # obj2 = BlocuriOpticeLed(marca = "Dacia", tip = 1310, blocuri_optice_led="NU")
 # print(obj2)
@@ -187,29 +187,29 @@
 # print(obj2.culoare, obj2.blocuri_optice_led, obj2.marca, obj2.tip)
 # print(obj.scaune_incalzite, obj.tip, obj.marca)
 
-#Problema4
+#Problema 4
 
-class Calcul:
-    def __init__(self, a=1, b=2, c=3, d=4 ):
-        self.a = a
-        self.b = b
-        self.c = c
-        self.d = d
-
-    def verificare(self):
-        self.e = f"Informatiile introduse nu sunt cifre"
-        if str(self.a).isnumeric() and str(self.b).isnumeric()and str(self.c).isnumeric() and str(self.d).isnumeric():
-            self.e = (self.a * (self.b + 3) / self.c) * self.d
-        return self.e
-
-    def __str__(self):
-        return f"Rezultatul este: {self.verificare()}"
-
-obiect = Calcul()
-print(obiect)
-obiect2=Calcul(5,6,7,8)
-print(obiect2)
-obiect3 = Calcul("x","y","z",2)
-print(obiect3)
-obiect4 = Calcul(9,2)
-print(obiect4)
+# class Calcul:
+#     def __init__(self, a=1, b=2, c=3, d=4 ):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+#         self.d = d
+#
+#     def verificare(self):
+#         self.e = f"Informatiile introduse nu sunt cifre"
+#         if str(self.a).isnumeric() and str(self.b).isnumeric()and str(self.c).isnumeric() and str(self.d).isnumeric():
+#             self.e = (self.a * (self.b + 3) / self.c) * self.d
+#         return self.e
+#
+#     def __str__(self):
+#         return f"Rezultatul este: {self.verificare()}"
+#
+# obiect = Calcul()
+# print(obiect)
+# obiect2=Calcul(5,6,7,8)
+# print(obiect2)
+# obiect3 = Calcul("x","y","z",2)
+# print(obiect3)
+# obiect4 = Calcul(9,2)
+# print(obiect4)

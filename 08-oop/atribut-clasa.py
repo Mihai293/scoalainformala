@@ -10,12 +10,12 @@ class Telefon:
         mesaj = f'Apelati {numar} utilizant propriul numar de telefon'
         return mesaj
 
-class TelefonFix(Telefon):
-
+class TelefonFix(Telefon):#mostenirea se face de la stanga la dreapta, dar daca nu gaseste
+                        # va intra in mostenirile mostenirilor tot de la stanga la dreapta
     last_sn = 0
 
     def __init__(self,numar):
-        super().__init__(numar)#metoda prin care ia toate atributele
+        super().__init__(numar)#metoda prin care ia toate atributele(metode) clasei parinte
         TelefonFix.last_sn += 1
         self.SN = f"Telefon fix - {TelefonFix.last_sn}"
 
@@ -35,3 +35,5 @@ mobil = TelefonMobil("0741 45 67 89")
 print(f'Numarul total de dispozitive fixe este {TelefonFix.last_sn}')
 print(f'Numarul total de dispozitive mobile este {TelefonMobil.last_sn}')
 print(f"Numarul total de dispozitive este {Telefon.counter}")
+#error MRO - eroare ordine mostenire
+#nu se permite mostenirea inlantuita
