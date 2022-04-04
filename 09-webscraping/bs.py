@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup#librarie
 import requests
 import pandas as pd
 
@@ -6,7 +6,7 @@ r = requests.get("https://www.bnr.ro/Cursul-de-schimb--7372.aspx")
 # print(r.text) #afiseaza tot codul html al paginii
 link = BeautifulSoup(r.text, "html.parser") #sursa pagina(markup) + parser (ajuta asezare mai buna in pagina)
 # print(link)
-
+#div are rolul de a impartii
 title = link.find_all("div", attrs={"class": "contentDiv"})#find all returneaza toate elementele cu clasele respective
 # print(title) #returneaza o lista  #tag cu atribut dictionar si elemente din code
 header = []
