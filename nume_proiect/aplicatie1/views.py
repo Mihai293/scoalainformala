@@ -13,10 +13,13 @@ class LocationsView(LoginRequiredMixin, ListView):
 
     model = Location
     template_name = "aplicatie1/location_index.html"
+    paginate_by = 5
+    queryset = model.objects.filter(active=1)
+    context_object_name = "location_list"
 
     def get_context_data(self, *args, **kwargs):
         data = super(LocationsView, self).get_context_data(*args, **kwargs)
-        data['location_list'] = self.model.objects.filter(active=1)
+        # data['location_list'] = self.model.objects.filter(active=1)
         return data
 
 class CreateLocationView(LoginRequiredMixin, CreateView):
@@ -50,9 +53,12 @@ def activate_location(request, pk):
 class LocationInactiveView(LoginRequiredMixin, ListView):
     model = Location
     template_name = 'aplicatie1/location_index.html'
+    paginate_by = 5
+    queryset = model.objects.filter(active=0)
+    context_object_name = "location_list"
 
     def get_context_data(self, *args, **kwargs):
         data = super(LocationInactiveView, self).get_context_data(*args, **kwargs)
-        data['location_list'] = self.model.objects.filter(active=0)
+        # data['location_list'] = self.model.objects.filter(active=0)
         return data
 
