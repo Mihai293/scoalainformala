@@ -72,4 +72,4 @@ for i in valori_descript:
 # print(descript_lista)
 
 # concatenare1 = pd.DataFrame(valori_lista, columns=descript_lista)
-# print(concatenare1)
+print(concatenare1)
