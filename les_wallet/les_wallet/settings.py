@@ -56,7 +56,7 @@ ROOT_URLCONF = 'les_wallet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/home.html'],
+        'DIRS': ['home.html'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
