@@ -1,0 +1,67 @@
+{% load static %}
+
+
+<html lang="en">
+  <head>
+  	<title>Table 07</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{% static 'table-07/https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'table-07/css/style.css' %}">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Crypto Wallet</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+						    <tr>
+						      <th>#</th>
+						      <th>Name</th>
+						      <th>Symbol</th>
+						      <th>Current Price</th>
+						      <th>Market Cap</th>
+
+						    </tr>
+						  </thead>
+						  <tbody>
+
+						  {% for i in apidata %}
+
+						    <tr>
+
+								<td>{{i.market_cap_rank}}.</td>
+								<td>{{i.name}}</td>
+								<td>{{i.symbol}}</td>
+								<td>{{i.current_price}}$</td>
+								<td>{{i.market_cap}}$</td>
+							</tr>
+						  {% endfor %}
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'table-07/js/jquery.min.js' %}"></script>
+  <script src="{% static 'table-07/js/popper.js' %}"></script>
+  <script src="{% static 'table-07/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'table-07/js/main.js' %}"></script>
+
+	</body>
+</html>
+

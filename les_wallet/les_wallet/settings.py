@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'aplicatie1',
     'aplicatie2',
     'login',
+    'coinmarket_api',
 ]
 
 MIDDLEWARE = [

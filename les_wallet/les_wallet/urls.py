@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('aplicatie2.urls')),
     path('login/', include('django.contrib.auth.urls'), {'next_page': '/'}, name='login'),
     path('login', include('login.urls')),
+    path('api/', include('coinmarket_api.urls')),
 ]
