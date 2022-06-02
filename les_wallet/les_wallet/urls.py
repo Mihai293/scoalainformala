@@ -25,4 +25,5 @@ urlpatterns = [
     path('login', include('login.urls')),
     path('crypto/', include('coinmarket_api.urls')),
     path('add/', include('coinmarket_api.urls')),
+
 ]

@@ -19,10 +19,10 @@ def coin(request):
 class WalletView(LoginRequiredMixin, ListView):
     model = Wallet
     template_name = 'index2.html'
+    context_object_name = "crypto_list"
 
     def get_context_data(self, *args, **kwargs):
         data = super(WalletView, self).get_context_data(*args, **kwargs)
-        data['crypto_list'] = self.model.objects.filter(active=0)
         return data
 
 
@@ -32,15 +32,13 @@ class WalletCreate(LoginRequiredMixin, CreateView):
     template_name = 'index2.html'
 
     def get_success_url(self):
-        return reverse('crypto:add')
+        return reverse('crypto:listare')
 
-# class UpdateCompanyView(LoginRequiredMixin, UpdateView):
-#     model = Wallet
-#     fields = ['Coin', 'Valoare']
-#     template_name = 'coinmarket_api/index2.html'
+# def Val():
 #
-#     def get_success_url(self):
-#         return reverse('coin:listare')
+#     import = requests.get(
+#         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false').json()
+#     
 #
 #
 # @login_required

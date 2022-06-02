@@ -1,6 +1,5 @@
 from django.db import models
 
-
 coin_choices = (('btc', 'btc'), ('eth', 'eth'))
 
 
