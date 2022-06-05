@@ -1,7 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 import requests
-from django.db.models import Sum
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.generic import ListView, CreateView, UpdateView
@@ -47,23 +46,7 @@ class Edit_coin(LoginRequiredMixin ,UpdateView):
 
     def get_success_url(self):
         return reverse('crypto:listare')
-
-# def suma(parametru,pk):
-#     model = Adunare
-#     adunare_coin = Adunare.objects.all().aggregate(Sum())
-# #
-#
-# @login_required
-# def activate_company(request, pk):
-#     Companies.objects.filter(id=pk).update(active=1)
-#     return redirect('companies:listare')
-#
-#
-# class CompanyInactiveView(LoginRequiredMixin, ListView):
-#     model = Companies
-#     template_name = 'aplicatie2/Companies_index.html'
-#
-#     def get_context_data(self, *args, **kwargs):
-#         data = super(CompanyInactiveView, self).get_context_data(*args, **kwargs)
-#         data['companies_list'] = self.model.objects.filter(active=0)
-#         return data
+#queri
+# def suma(request):
+#     adunare_coin = Wallet.objects.all().aggregate(Sum())
+#     return adunare_coin

@@ -56,7 +56,7 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="{% static 'website/images/logo5.jpg' %}" alt="image"></a>
+                        <a class="navbar-brand" href="/"><img src="{% static 'website/images/logo5.jpg' %}" alt="image"></a>
                     </div>
 <!--                    <div class="site_information">-->
 <!--                        <ul>-->
@@ -83,11 +83,18 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
                         <li><a class="nav-link" href="/">Home</a></li>
-                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="/#about">About</a></li>
                         <li><a class="nav-link" href="">Wallet</a></li>
-                        <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="new.html">News</a></li>
-                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="/#services">Services</a></li>
+                        <li><a class="nav-link" href="/#news">News</a></li>
+                        <li><a class="nav-link" href="/#contact">Contact</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a class="nav-link" href="/logout">Logout</a></li>
+                        {% else %}
+                        <li><a class="nav-link" href="/login">Login</a></li>
+                        {% endif %}
+
+
                     </ul>
                 </div>
                      </div>
@@ -129,8 +136,18 @@
                     <div class="full paddding_left_15">
                         <p>Tracking your portfolio is an important part of managing any investment, but you need a portfolio tracker that does everything you need. This is where LeS Wallet steps in to make your investments that much better.</p>
                     </div>
+
                     <div class="full paddding_left_15">
-                        <a class="main_bt" href="{% url 'login' %}">Login ></a>
+
+                        {% if user.is_authenticated %}
+                        <a class="main_bt" href="{% url 'login' %}">Enter</a>
+                        {% else %}
+                        <a class="main_bt" href="{% url 'login' %}">Login</a>
+                        {% endif %}
+
+                    </div>
+                    <div class="full paddding_left_15">
+                        <a class="main_bt" href="{% url 'register_user' %}">Register</a>
 
                     </div>
                 </div>
@@ -157,11 +174,11 @@
                             <div class="full">
                                 <ul class="menu_footer">
                                     <li><a href="/">> Home</a></li>
-                                    <li><a href="about.html">> About</a></li>
+                                    <li><a href="/#about">> About</a></li>
                                     <li><a href="">> Wallet</a></li>
-                                    <li><a href="services.html">> Services</a></li>
-                                    <li><a href="new.html">> News</a></li>
-                                    <li><a href="contact.html">> Contact</a></li>
+                                    <li><a href="/#services">> Services</a></li>
+                                    <li><a href="/#news">> News</a></li>
+                                    <li><a href="/#contact">> Contact</a></li>
                                 </ul>
                             </div>
                         </div>

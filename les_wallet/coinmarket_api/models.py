@@ -21,6 +21,4 @@ class Wallet(models.Model):
     def __str__(self):
         return f' {self.coin_number}, {self.coin_type}'
 
-# class Adunare(models.Model):
-#     coin_adunare = models.ForeignKey(Wallet, on_delete=models.CASCADE())
 
