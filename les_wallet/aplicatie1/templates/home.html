@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="{% static 'website/images/logo5.jpg' %}" alt="image"></a>
+                        <a class="navbar-brand" href=""><img src="{% static 'website/images/logo5.jpg' %}" alt="image"></a>
 
                     </div>
                     <div class="site_information">
@@ -85,11 +85,11 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
                         <li><a class="nav-link active" href="">Home</a></li>
-                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
                         <li><a class="nav-link" href="wallet\">Wallet</a></li>
-                        <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="new.html">News</a></li>
-                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="#services">Services</a></li>
+                        <li><a class="nav-link" href="#news">News</a></li>
+                        <li><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
                      </div>
@@ -131,7 +131,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slide_text white_fonts">
-                                        <h3>Best<br><strong>Currency</strong></h3>
+                                        <h3>Best<br><strong>Data</strong></h3>
                                         <br>
 <!--                                        <a class="start_exchange_bt" href="index2.html">Start Exchange ></a>-->
                                     </div>
@@ -176,7 +176,7 @@
                 <div class="col-md-12">
                     <div class="full">
                         <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>Services</h2>    
+                           <h2 id="services"><span class="theme_color"></span>Services</h2>
                         </div>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="full services_blog">
                         <img class="img-responsive" src="{% static 'website/images/s2.png' %}" alt="#" />
-                        <h4>Mobile Apps</h4>
+                        <h4>Coingecko API</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -249,15 +249,18 @@
                 <div class="col-md-6">
                     <div class="full paddding_left_15">
                         <div class="heading_main text_align_left">
-                           <h2>About</h2>    
+                           <h2 id="about">About</h2>
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>xxxxxxxxxxxxxxxxxxTEXTxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                        <p>Free & Powerful Crypto Portfolio Tracker
+Track your crypto earnings like a pro, with a user-friendly and reliable portfolio tracker that you can rely on.
+                        Real-time Price Data (13,000+ coins)
+                            From the world's largest independent cryptocurrency data aggregator.
+                        Create Multiple Portfolios.
+                            Cover all strategies - conservative, risky, long term HODL, DeFi, low-cap gems, high risk positions and more!</p>
                     </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Read More ></a>
-                    </div>
+
                 </div>
                 <div class="col-md-6">
                     <div class="full text_align_right_img">
@@ -275,7 +278,7 @@
                 <div class="col-md-12">
                     <div class="full">
                         <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>News</h2>    
+                           <h2 id="news"><span class="theme_color"></span>News</h2>
                         </div>
                     </div>
                 </div>
@@ -378,11 +381,11 @@
                             <div class="full">
                                 <ul class="menu_footer">
                                     <li><a href="">> Home</a></li>
-                                    <li><a href="about.html">> About</a></li>
+                                    <li><a href="/#about">> About</a></li>
                                     <li><a href="wallet/">> Wallet</a></li>
-                                    <li><a href="services.html">> Services</a></li>
-                                    <li><a href="new.html">> News</a></li>
-                                    <li><a href="contact.html">> Contact</a></li>
+                                    <li><a href="/#services">> Services</a></li>
+                                    <li><a href="/#news">> News</a></li>
+                                    <li><a href="/#contact">> Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -390,7 +393,7 @@
                             <div class="full">
                                 <div class="footer_blog full white_fonts">
                              <h3>Newsletter</h3>
-                             <p>XXXXXXXXXSUBXXXXXX</p>
+                             <p></p>
                              <div class="newsletter_form">
                                 <form action="index.html">
                                    <input type="email" placeholder="Your Email" name="#" required="">
@@ -403,7 +406,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
                                 <div class="footer_blog full white_fonts">
-                             <h3>Contact us</h3>
+                             <h3 id="contact">Contact us</h3>
                              <ul class="full">
                                <li><img src="{% static 'website/images/i5.png' %}"><span>Bld. Timisoara 101N<br>Bucharest</span></li>
                                <li><img src="{% static 'website/images/i6.png' %}"><span>les-wallet@gmail.com</span></li>
@@ -431,7 +434,7 @@
 
     <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
-    <!-- ALL JS FILES -->{% static 'website/' %}
+    <!-- ALL JS FILES -->
     <script src="{% static 'website/js/jquery.min.js' %}"></script>
 	<script src="{% static 'website/js/popper.min.js' %}"></script>
     <script src="{% static 'website/js/bootstrap.min.js' %}"></script>

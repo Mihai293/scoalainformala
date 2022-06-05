@@ -1,0 +1,16 @@
+{% load static %}
+
+<form action="" method=POST>
+    {% csrf_token %}
+    {{ form }}
+    <link rel="stylesheet" href="{% static 'login/login.css' %}">
+    <button type="submit">Register</button>
+
+</form>
+<div class="container">
+        {% if messages %}
+        {% for messages in messages %}
+        {{messages}}
+        {% endfor %}
+        {% endif %}
+    </div>
