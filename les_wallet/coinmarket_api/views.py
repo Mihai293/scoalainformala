@@ -1,10 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 import requests
-from django.shortcuts import render
+from django.db.models import Sum
+from django.shortcuts import render, redirect
 from django.urls import reverse
-from django.views.generic import ListView, CreateView
-
+from django.views.generic import ListView, CreateView, UpdateView
 
 from coinmarket_api.models import Wallet
 
@@ -29,23 +29,29 @@ class WalletView(LoginRequiredMixin, ListView):
 class WalletCreate(LoginRequiredMixin, CreateView):
     model = Wallet
     fields = ['coin_number', 'coin_type']
-    template_name = 'index2.html'
+    template_name = 'index2_form.html'
 
     def get_success_url(self):
         return reverse('crypto:listare')
 
-# def Val():
-#
-#     import = requests.get(
-#         'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false').json()
-#     
-#
-#
-# @login_required
-# def delete_coin(request, pk):
-#     Companies.objects.filter(id=pk).update(active=0)
-#     return redirect('companies:listare')
-#
+@login_required
+def del_coin(request, pk):
+    moneda = Wallet.objects.filter(id=pk)
+    moneda.delete()
+    return redirect('crypto:listare')
+
+class Edit_coin(LoginRequiredMixin ,UpdateView):
+    model = Wallet
+    fields = ['coin_number', 'coin_type']
+    template_name = 'index2_form.html'
+
+    def get_success_url(self):
+        return reverse('crypto:listare')
+
+# def suma(parametru,pk):
+#     model = Adunare
+#     adunare_coin = Adunare.objects.all().aggregate(Sum())
+# #
 #
 # @login_required
 # def activate_company(request, pk):

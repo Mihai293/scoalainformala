@@ -56,7 +56,7 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="{% static 'website/images/logo5.jpg' %}" alt="image"></a>
                     </div>
 <!--                    <div class="site_information">-->
 <!--                        <ul>-->
@@ -82,9 +82,9 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="/">Home</a></li>
                         <li><a class="nav-link" href="about.html">About</a></li>
-                        <li><a class="nav-link" href="wallet.html">Wallet</a></li>
+                        <li><a class="nav-link" href="">Wallet</a></li>
                         <li><a class="nav-link" href="services.html">Services</a></li>
                         <li><a class="nav-link" href="new.html">News</a></li>
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
@@ -92,12 +92,6 @@
                 </div>
                      </div>
                  </nav>
-                 <div class="search-box">
-                    <input type="text" class="search-txt" placeholder="Search">
-                    <a class="search-btn">
-                        <img src="images/search_icon.png" alt="#" />
-                    </a>
-                </div> 
                 </div>
             </div>
           </div>
@@ -125,9 +119,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/img1.png" alt="#" />
-                    </div>
                 </div>
                 <div class="col-md-6 layout_padding">
                     <div class="full paddding_left_15">
@@ -136,7 +127,7 @@
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p>Tracking your portfolio is an important part of managing any investment, but you need a portfolio tracker that does everything you need. This is where LeS Wallet steps in to make your investments that much better.</p>
                     </div>
                     <div class="full paddding_left_15">
                         <a class="main_bt" href="{% url 'login' %}">Login ></a>
@@ -165,9 +156,9 @@
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
-                                    <li><a href="home.html">> Home</a></li>
+                                    <li><a href="/">> Home</a></li>
                                     <li><a href="about.html">> About</a></li>
-                                    <li><a href="wallet.html">> Wallet</a></li>
+                                    <li><a href="">> Wallet</a></li>
                                     <li><a href="services.html">> Services</a></li>
                                     <li><a href="new.html">> News</a></li>
                                     <li><a href="contact.html">> Contact</a></li>

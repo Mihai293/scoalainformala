@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 def login_first(request):
-    return render(request, 'enter.html')
+    return render(request, 'templates/enter.html')
 
 def login_user(request):
     if request.method == 'POST':
@@ -18,4 +18,4 @@ def login_user(request):
             return redirect('login')
 
     else:
-        return render(request, 'enter.html')
+        return render(request, 'enterv1.html')

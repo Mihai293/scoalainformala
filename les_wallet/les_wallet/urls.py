@@ -20,10 +20,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('aplicatie1.urls')),
-    path('', include('aplicatie2.urls')),
+    path('home/', include('aplicatie1.urls')),
+    path('wallet/', include('aplicatie2.urls')),
     path('login/', include('django.contrib.auth.urls'), {'next_page': '/'}, name='login'),
     path('login', include('login.urls')),
     path('crypto/', include('coinmarket_api.urls')),
-    path('add/', include('coinmarket_api.urls')),
 
 ]
