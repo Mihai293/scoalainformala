@@ -84,9 +84,9 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="index.html">Home</a></li>
+                        <li><a class="nav-link active" href="">Home</a></li>
                         <li><a class="nav-link" href="about.html">About</a></li>
-                        <li><a class="nav-link" href="wallet.html">Wallet</a></li>
+                        <li><a class="nav-link" href="wallet\">Wallet</a></li>
                         <li><a class="nav-link" href="services.html">Services</a></li>
                         <li><a class="nav-link" href="new.html">News</a></li>
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
@@ -94,12 +94,12 @@
                 </div>
                      </div>
                  </nav>
-                 <div class="search-box">
-                    <input type="text" class="search-txt" placeholder="Search">
-                    <a class="search-btn">
-                        <img src="{% static 'website/images/search_icon.png' %}" alt="#" />
-                    </a>
-                </div> 
+<!--                 <div class="search-box">-->
+<!--                    <input type="text" class="search-txt" placeholder="Search">-->
+<!--                    <a class="search-btn">-->
+<!--                        <img src="{% static 'website/images/search_icon.png' %}" alt="#" />-->
+<!--                    </a>-->
+<!--                </div> -->
                 </div>
             </div>
           </div>
@@ -162,10 +162,7 @@
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxTEXTxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">About more ></a>
+                        <p>LeS Wallet is a website that allows you to manage your investments and keep track of how the value of your coins are changing.Updating 24/7 using price data from the biggest exchanges.</p>
                     </div>
                 </div>
             </div>
@@ -213,9 +210,6 @@
             <div class="row margin-top_30">
                 <div class="col-sm-12">
                     <div class="full">
-                        <div class="center">
-                            <a class="main_bt" href="#">About more ></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -234,14 +228,14 @@
                 <div class="col-md-6 layout_padding">
                     <div class="full paddding_left_15">
                         <div class="heading_main text_align_left">
-                           <h2><span class="theme_color">Apply for</span> Exchange</h2>    
+                           <h2><span class="theme_color">Create your</span> Wallet</h2>
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>xxxxxxxxxxxxxxxxxxxxxxxxTEXTxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                        <p>Your data is safe and secure. We take data security and privacy very seriously</p>
                     </div>
                     <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Exchange ></a>
+                        <a class="main_bt" href="{% url 'wallet_pag:wallet' %}">Wallet></a>
                     </div>
                 </div>
             </div>
@@ -290,30 +284,30 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="full news_blog">
                        <img class="img-responsive" src="{% static 'website/images/b1.png' %}" alt="#" />
-                       <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
+                       <div class="overlay"><a class="main_bt transparent" href="https://news.bitcoin.com/">View</a></div>
                        <div class="blog_details">
                          <h3>Bitcoin News</h3>
-                         <p>xxxxxxxxxxxxxxxxtextxxxxxxxxxxxxxxx</p>
+                         <p>Bitcoin.com News is operated by Saint Bitts LLC, a company incorporated in the country of Saint Kitts and Nevis. This website is intended to deliver news related to the Bitcoin network</p>
                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="full news_blog">
                         <img class="img-responsive" src="{% static 'website/images/b2.png' %}" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
+                        <div class="overlay"><a class="main_bt transparent" href="https://coinmarketcap.com/ro/currencies/ethereum/news/">View</a></div>
                        <div class="blog_details">
                          <h3>Ethereum News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                         <p>Ethereum is a decentralized open-source blockchain system that features its own cryptocurrency, Ether. ETH works as a platform for numerous other cryptocurrencies, as well as for the execution of decentralized smart contracts.</p>
                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="full news_blog">
                         <img class="img-responsive" src="{% static 'website/images/b3.png' %}" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
+                        <div class="overlay"><a class="main_bt transparent" href="https://elrond.com/blog/">View</a></div>
                        <div class="blog_details">
-                         <h3>Light News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                         <h3>Elrond News</h3>
+                         <p>A highly scalable, fast and secure blockchain platform for distributed apps, enterprise use cases and the new internet economy.</p>
                        </div>
                     </div>
                 </div>
@@ -327,9 +321,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="full">
-                        <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>Contact</h2>    
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -337,35 +329,35 @@
     </div>
     <!-- end section -->
     <!-- contact_form -->
-    <div class="section contact_form">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-12 offset-lg-3">
-                    <div class="full">
-                        <form class="contact_form_inner" action="#">
-                            <fieldset>
-                                <div class="field">
-                                    <input type="text" name="name" placeholder="Your name" />
-                                </div>
-                                <div class="field">
-                                    <input type="email" name="email" placeholder="Email" />
-                                </div>
-                                <div class="field">
-                                    <input type="text" name="phone_no" placeholder="Phone number" />
-                                </div>
-                                <div class="field">
-                                    <textarea placeholder="Message"></textarea>
-                                </div>
-                                <div class="field center">
-                                    <button>SEND</button>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="section contact_form">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-6 col-sm-12 offset-lg-3">-->
+<!--                    <div class="full">-->
+<!--                        <form class="contact_form_inner" action="#">-->
+<!--                            <fieldset>-->
+<!--                                <div class="field">-->
+<!--                                    <input type="text" name="name" placeholder="Your name" />-->
+<!--                                </div>-->
+<!--                                <div class="field">-->
+<!--                                    <input type="email" name="email" placeholder="Email" />-->
+<!--                                </div>-->
+<!--                                <div class="field">-->
+<!--                                    <input type="text" name="phone_no" placeholder="Phone number" />-->
+<!--                                </div>-->
+<!--                                <div class="field">-->
+<!--                                    <textarea placeholder="Message"></textarea>-->
+<!--                                </div>-->
+<!--                                <div class="field center">-->
+<!--                                    <button>SEND</button>-->
+<!--                                </div>-->
+<!--                            </fieldset>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <!-- end contact_form -->
     <!-- end section -->
     <!-- Start Footer -->
@@ -385,9 +377,9 @@
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
-                                    <li><a href="home.html">> Home</a></li>
+                                    <li><a href="">> Home</a></li>
                                     <li><a href="about.html">> About</a></li>
-                                    <li><a href="wallet.html">> Wallet</a></li>
+                                    <li><a href="wallet/">> Wallet</a></li>
                                     <li><a href="services.html">> Services</a></li>
                                     <li><a href="new.html">> News</a></li>
                                     <li><a href="contact.html">> Contact</a></li>

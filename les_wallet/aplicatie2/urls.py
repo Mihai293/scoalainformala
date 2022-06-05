@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+app_name = 'wallet_pag'
+
 urlpatterns = [
-    path('wallet.html', views.wallet, name='wallet'),
+    path('', views.wallet, name='wallet'),
 ]
