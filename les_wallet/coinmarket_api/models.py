@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models import Sum
 
 coin_choices = (
 ('btc', 'btc'), ('eth', 'eth'), ('usdt', 'usdt'), ('usdc', 'usdc'), ('bnb', 'bnb'), ('ada', 'ada'), ('xrp', 'xrp'),
